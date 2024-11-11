@@ -1,0 +1,90 @@
+.popup-mobile-menu .mainmenu li a {
+  pointer-events: auto; /* Linklerin tıklanabilir olmasını sağlar */
+  z-index: 9999; /* Linklerin ön planda görünmesini sağlar */
+  color: #000; /* Yazı rengi siyah */
+  font-size: 24px; /* Yazı boyutu */
+  text-decoration: none; /* Alt çizgi yok */
+}
+
+.popup-mobile-menu {
+  z-index: 9999; /* Menü öğelerinin diğer öğelerin üstünde olmasını sağlamak için */
+}
+
+.fixed-action-buttons {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Sağ tarafa hizalamak için left yerine right kullan */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* İkonlar arasında boşluk bırakmak için */
+}
+
+.phone-button,
+.whatsapp-button {
+  width: 50px;
+  height: 50px;
+  background-color: #0d6efd; /* Telefon ikonu arka plan rengi */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-button {
+  background-color: #25d366; /* WhatsApp için yeşil arka plan */
+}
+
+.phone-button img,
+.whatsapp-button img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.menu-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Koyu arka plan */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1000;
+  opacity: 0; /* Başlangıçta görünmez */
+  visibility: hidden; /* Başlangıçta görünmez */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Geçiş efekti */
+}
+
+.popup-mobile-menu.active {
+  opacity: 1; /* Açıldığında görünür hale gelir */
+  visibility: visible; /* Açıldığında görünür hale gelir */
+}
+
+/* Menü Öğeleri */
+.popup-mobile-menu .mainmenu {
+  list-style-type: none; /* Nokta işaretlerini kaldır */
+  padding: 0; /* İç boşluğu kaldır */
+  text-align: center; /* Metni ortala */
+}
+
+.popup-mobile-menu .mainmenu li {
+  margin: 15px 0; /* Öğeler arası boşluk */
+}
+
+/* Eğer menü açıldığında ek bilgi göstermek istiyorsanız, burada tanımlamalar yapabilirsiniz */
