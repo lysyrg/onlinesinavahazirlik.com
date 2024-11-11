@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const accessToken = '675edef39a1f37a9948397991c251f62'; // Buraya Vimeo Access Token'ınızı ekleyin
+const accessToken = '675edef39a1f37a9948397991c251f62'; // Vimeo Access Token
 
 const Egitimlerim = ({ kursAdi }) => {
-    const [dersler, setDersler] = useState({});
-    const [seciliDers, setSeciliDers] = useState(null);
+    const [dersler, setDersler] = useState([]);
     const [seciliVideo, setSeciliVideo] = useState(null);
 
     useEffect(() => {
@@ -16,11 +15,11 @@ const Egitimlerim = ({ kursAdi }) => {
                         'Authorization': `Bearer ${accessToken}`
                     }
                 });
-                
-                const videoData = response.data.data; // API'nin döndürdüğü video listesi
-                setDersler({ [kursAdi]: videoData }); // Ders listesini güncelleyin
+
+                const videoData = response.data.data;
+                setDersler(videoData); // Tüm videoları ayarla
             } catch (error) {
-                console.error('Vimeo videoları çekilemedi:', error);
+                console.error('Vimeo videoları çekilemedi:', error.response ? error.response.data : error.message);
             }
         };
 
@@ -49,43 +48,22 @@ const Egitimlerim = ({ kursAdi }) => {
                 <p style={{ fontSize: '1.2rem', color: 'gray' }}>Bir videoya tıklayın.</p>
             )}
 
-            {/* Ders Başlıkları */}
-            <div className="ders-list">
-                {Object.keys(dersler).map((dersAdi) => (
-                    <div key={dersAdi} style={{ marginTop: '20px' }}>
-                        <h4
-                            onClick={() => setSeciliDers(dersAdi)}
-                            style={{
-                                cursor: 'pointer',
-                                color: seciliDers === dersAdi ? 'blue' : 'black',
-                                fontSize: '1.3rem',
-                                fontWeight: 'bold'
-                            }}
-                        >
-                            {dersAdi}
-                        </h4>
-
-                        {/* Seçilen Derse Ait Videolar */}
-                        {seciliDers === dersAdi && (
-                            <div className="video-list" style={{ marginLeft: '20px', marginTop: '10px' }}>
-                                {dersler[dersAdi].map((video, index) => (
-                                    <div
-                                        key={index}
-                                        className="video-item"
-                                        onClick={() => setSeciliVideo(video)}
-                                        style={{
-                                            cursor: 'pointer',
-                                            padding: '10px',
-                                            borderBottom: '1px solid #ddd',
-                                            fontSize: '1.2rem',
-                                            color: 'darkblue'
-                                        }}
-                                    >
-                                        {video.name}
-                                    </div>
-                                ))}
-                            </div>
-                        )}
+            {/* Video Listesi */}
+            <div className="video-list">
+                {dersler.map((video, index) => (
+                    <div
+                        key={index}
+                        className="video-item"
+                        onClick={() => setSeciliVideo(video)}
+                        style={{
+                            cursor: 'pointer',
+                            padding: '10px',
+                            borderBottom: '1px solid #ddd',
+                            fontSize: '1.2rem',
+                            color: 'darkblue'
+                        }}
+                    >
+                        {video.name}
                     </div>
                 ))}
             </div>
