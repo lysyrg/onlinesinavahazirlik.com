@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/inc_header';
+
 
 // CSS dosyalarını buraya ekleyin
 import '../assets/css/vendor/bootstrap.min.css';
@@ -19,7 +19,7 @@ import '../assets/css/plugins/plyr.css';
 const IndexPage = () => {
   return (
     <div className="rbt-header-sticky">
-      <Header /> {/* Header bileşenini çağırdık */}
+     
 
       {/* Start Slider Area */}
       <div className="rbt-splash-slider d-flex align-items-center">
@@ -171,104 +171,7 @@ const IndexPage = () => {
       </div>
       {/* End Slider Area */}
 
-      {/* Start Coding Quality Area */}
-      <div className="rbt-splash-coding-quality-area bg-color-white rbt-section-gapBottom">
-        <div className="wrapper">
-          <div className="container">
-            <div className="row mb--60">
-              <div className="col-lg-12">
-                <div className="section-title text-center">
-                  <span className="subtitle bg-secondary-opacity">Online Sınava Hazırlık</span>
-                  <h2 className="title">En İyi Eğitmenlerle Sınava Hazırlanın.</h2>
-                </div>
-              </div>
-            </div>
-            <div className="row g-5">
-              {/* Start Top Feature */}
-              <div className="col-lg-4 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                <div className="top-features-box h-100 text-center bg-gradient-15">
-                  <div className="inner">
-                    <div className="content">
-                      <span className="pre-title text-uppercase">ONLINE KPSS Sınava Hazırlık</span>
-                      <h4 className="title">ONLINE KPSS Kursu</h4>
-                    </div>
-                    <div className="thumbnail">
-                      <img src="assets/images/splash/topfeature/01.png" alt="Image" />
-                    </div>
-                    <div className="rbt-badge-group">
-                      <span className="rbt-badge">👍5 Adet Kaynak</span>
-                      <span className="rbt-badge">👍Tüm konulara ait konu anlatımı</span>
-                      <span className="rbt-badge">👍Çıkmış soruların çözümü</span>
-                      <span className="rbt-badge">👍Soru çözüm stratejileri</span>
-                      <span className="rbt-badge">👍PDF Döküman desteği</span>
-                    </div>
-                  </div>
-                  <div className="shape-image">
-                    <img src="assets/images/splash/icons/sun-shadow-right.png" alt="Shape Images" />
-                  </div>
-                </div>
-              </div>
-              {/* End Top Feature */}
-
-              {/* Start Top Feature */}
-              <div className="col-lg-4 col-md-6 col-12" data-sal-delay="200" data-sal="slide-up" data-sal-duration="800">
-                <div className="top-features-box h-100 text-center bg-gradient-16">
-                  <div className="inner">
-                    <div className="content">
-                      <span className="pre-title text-uppercase">ONLINE DGS Sınava Hazırlık</span>
-                      <h4 className="title">ONLINE DGS Kursu.</h4>
-                    </div>
-
-                    <div className="thumbnail">
-                      <img src="assets/images/splash/topfeature/02.png" alt="Image" />
-                    </div>
-                    <div className="rbt-badge-group">
-                      <span className="rbt-badge">👍5 Adet Kaynak</span>
-                      <span className="rbt-badge">👍Tüm konulara ait konu anlatımı</span>
-                      <span className="rbt-badge">👍Çıkmış soruların çözümü</span>
-                      <span className="rbt-badge">👍Soru çözüm stratejileri</span>
-                      <span className="rbt-badge">👍PDF Döküman desteği</span>
-                    </div>
-                  </div>
-                  <div className="shape-image">
-                    <img src="assets/images/splash/icons/sun-shadow-right-2.png" alt="Shape Images" />
-                  </div>
-                </div>
-              </div>
-              {/* End Top Feature */}
-
-              {/* Start Top Feature */}
-              <div className="col-lg-4 col-md-6 col-12" data-sal-delay="250" data-sal="slide-up" data-sal-duration="800">
-                <div className="top-features-box h-100 text-center bg-gradient-17">
-                  <div className="inner">
-                    <div className="content">
-                      <span className="pre-title text-uppercase">ONLINE YDS Sınava Hazırlık</span>
-                      <h4 className="title">ONLINE YDS Kursu</h4>
-                    </div>
-
-                    <div className="thumbnail">
-                      <img src="assets/images/splash/topfeature/03.png" alt="Image" />
-                    </div>
-
-                    <div className="rbt-badge-group">
-                      <span className="rbt-badge">👍5 Adet Kaynak</span>
-                      <span className="rbt-badge">👍Tüm konulara ait konu anlatımı</span>
-                      <span className="rbt-badge">👍Çıkmış soruların çözümü</span>
-                      <span className="rbt-badge">👍Soru çözüm stratejileri</span>
-                      <span className="rbt-badge">👍PDF Döküman desteği</span>
-                    </div>
-                  </div>
-                  <div className="shape-image">
-                    <img src="assets/images/splash/icons/sun-shadow-right-3.png" alt="Shape Images" />
-                  </div>
-                </div>
-              </div>
-              {/* End Top Feature */}
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* End Coding Quality Area */}
+      
 
       {/* Start Elements Presentation Area */}
       <div className="rbt-elements-presentation-area overflow-hidden bg-color-white rbt-section-gapBottom pt--80">
@@ -405,36 +308,28 @@ const IndexPage = () => {
                     <span className="rbt-badge-6 bg-primary-opacity">Sınavlarda Fark Yarat, Geleceğini Şekillendir</span>
                     <h4 className="title">Başarıya Giden Yolda, En Doğru Adres</h4>
                     <p className="description">
-                      "KPSS, DGS, ALES ve YDS sınavlarına en etkili hazırlık platformu. Online eğitimlerimizle hedeflerinize emin adımlarla ilerleyin"
+                      YDS, YÖKDİL sınavlarına en etkili hazırlık platformu. Online eğitimlerimizle hedeflerinize emin adımlarla ilerleyin"
                     </p>
 
                     <div className="layout-format-image mb--20">
                       <img src="assets/images/splash/icons/post-format.png" alt="post Images" />
                     </div>
 
-                    <h5 className="subtitle mb--20">KPSS,DGS, ALES, YDS ONLINE EĞİTİM</h5>
+                    <h5 className="subtitle mb--20">YDS ONLINE EĞİTİM</h5>
 
                     <div className="plan-offer-list-wrapper">
-                      <ul className="plan-offer-list rbt-list-primary-opacity">
-                        <li><i className="feather-check"></i> 📚 400 Saat KPSS ONLINE Eğitim</li>
-                        <li><i className="feather-check"></i> 👍 5 Adet KPSS Kaynak</li>
-                        <li><i className="feather-check"></i> 👍Tüm konulara ait konu anlatımı</li>
-                        <li><i className="feather-check"></i> 👍Çıkmış soruların çözümü</li>
-                        <li><i className="feather-check"></i> 👍Soru çözüm stratejileri</li>
-                        <li><i className="feather-check"></i> 👍PDF Döküman desteği</li>
-                        <li><i className="feather-check"></i> 👍10 Adet Online Deneme</li>
-                        <li><i className="feather-check"></i> 👍KPSS Kampı</li>
+                      <ul className="rbt-list-style-1">
+                        <li><i className="feather-check"></i>📚 Toplam 140 Saat ONLINE (CANLI DERS) Eğitim</li>
+                        <li><i className="feather-check"></i>👍Gramer konu anlatımı ve dil bilgisi konu testleri</li>
+                        <li><i className="feather-check"></i>👍Kelime bilgisi kitabı</li>
+                        <li><i className="feather-check"></i>👍Çıkmış sınav sorularının çözümü</li>
+                        <li><i className="feather-check"></i>👍Çıkmış sorular paralelinde hazırlanmış İngilizce soru bankası kitabı</li>
+                        <li><i className="feather-check"></i>👍YDS okuma kitabı</li>
+                        <li><i className="feather-check"></i>👍YDS’ye yönelik özgün testler</li>
+                        <li><i className="feather-check"></i>👍10 adet özgün deneme sınavı</li>
+                        <li><i className="feather-check"></i>👍Öğretmenin ders notları ve yaprak testleri</li>
                       </ul>
-                      <ul className="plan-offer-list rbt-list-primary-opacity">
-                        <li><i className="feather-check"></i> 📚 400 Saat KPSS ONLINE Eğitim</li>
-                        <li><i className="feather-check"></i> 👍 5 Adet KPSS Kaynak</li>
-                        <li><i className="feather-check"></i> 👍Tüm konulara ait konu anlatımı</li>
-                        <li><i className="feather-check"></i> 👍Çıkmış soruların çözümü</li>
-                        <li><i className="feather-check"></i> 👍Soru çözüm stratejileri</li>
-                        <li><i className="feather-check"></i> 👍PDF Döküman desteği</li>
-                        <li><i className="feather-check"></i> 👍10 Adet Online Deneme</li>
-                        <li><i className="feather-check"></i> 👍KPSS Kampı</li>
-                      </ul>
+
                     </div>
                   </div>
                 </div>

@@ -1,10 +1,9 @@
 import React from 'react';
-import Header from '../components/inc_header';
 
 const FirmProfilePage = () => {
   return (
     <div className="rbt-header-sticky">
-      <Header /> {/* Header bileşenini çağırdık */}
+   
 
       <div className="rbt-about-area about-style-1 bg-color-white rbt-section-gap">
         <div className="container">

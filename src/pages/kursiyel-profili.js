@@ -1,10 +1,9 @@
 import React from 'react';
-import Header from '../components/inc_header';
 
 const Kursiyerprofili = () => {
   return (
     <div>
-      <Header />
+    
 
       <div className="rbt-cart-side-menu">
         <div className="inner-wrapper">

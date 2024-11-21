@@ -1,14 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Link bileşenini içe aktarıyoruz
-import Header from '../components/inc_header';
 
 const TanitimVideolari = () => {
     return (
         <div>
-            <header>
-                {/* Header bileşenini burada çağırabilirsiniz */}
-                <Header />
-            </header>
+           
 
             <div className="rbt-banner-area rbt-banner-8 variation-01 bg_image bg_image--9">
                 <div className="wrapper w-100">
@@ -18,7 +14,9 @@ const TanitimVideolari = () => {
                                 <div className="content">
                                     <div className="inner">
                                         <div className="rbt-badge-group justify-content-start">
-                                            <span className="meta-text d-flex align-items-center"><span className="icon">🎬</span> Canlı Ders</span>
+                                            <span className="meta-text d-flex align-items-center">
+                                                <span className="icon">🎬</span> Canlı Ders
+                                            </span>
                                             <Link to="#" className="rbt-badge-2">
                                                 <div className="image">
                                                     <img src="assets/images/testimonial/client-02.png" alt="Education Images" />
@@ -28,17 +26,18 @@ const TanitimVideolari = () => {
                                             </Link>
                                         </div>
                                         <p className="description has-medium-font-size mt--20">
-                                            Uzman eğitmenlerle hazırlanmış içerikler ve interaktif derslerle, KPSS, DGS, ALES, YDS sınavlarında başarıya ulaşmanın anahtarı burada!
+                                        Canlı dersler ve kapsamlı içeriklerle, YDS başarınız için ihtiyacınız olan her şey burada.
                                         </p>
+
                                         <div className="slider-btn rbt-button-group justify-content-start">
-                                            <Link className="rbt-btn btn-gradient radius-round hover-icon-reverse" to="kurskayit">
+                                            <Link className="rbt-btn btn-gradient radius-round hover-icon-reverse" to="/login">
                                                 <span className="icon-reverse-wrapper">
                                                     <span className="btn-text">Kursa Kayıt Ol</span>
                                                     <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                                                     <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                                                 </span>
                                             </Link>
-                                            <Link className="rbt-btn radius-round hover-icon-reverse btn-white" to="iletisim">
+                                            <Link className="rbt-btn radius-round hover-icon-reverse btn-white" to="/iletisim">
                                                 <span className="icon-reverse-wrapper">
                                                     <span className="btn-text">İletişim</span>
                                                     <span className="btn-icon"><i className="feather-arrow-right"></i></span>
@@ -53,83 +52,56 @@ const TanitimVideolari = () => {
                     </div>
                 </div>
             </div>
-
             <div className="container mt--50">
-                <div className="row">
-                    <h3>ÖRNEK DERS & SORU ÇÖZÜM VİDEOLARIMIZ</h3>
-                    <div className="col-lg-6 col-md-6">
-                        <div className="video-wrapper">
-                            <h4>Matematik Tanıtım Videosu</h4>
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/3uJNgwnE6_w" frameBorder="0" allowFullScreen></iframe>
-                        </div>
-                    </div>
+        <div className="row">
+          <h3>ÖRNEK DERS & SORU ÇÖZÜM VİDEOLARIMIZ</h3>
+        </div>
 
-                    <div className="col-lg-6 col-md-6">
-                        <div className="video-wrapper">
-                            <h4>Tarih Tanıtım Videosu</h4>
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/_iAA96I2VBQ" frameBorder="0" allowFullScreen></iframe>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="row mt--30">
-                    <div className="col-lg-6 col-md-6">
-                        <div className="video-wrapper">
-                            <h4>Türkçe Tanıtım Videosu</h4>
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/xigey0KeMsE" frameBorder="0" allowFullScreen></iframe>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-6 col-md-6">
-                        <div className="video-wrapper">
-                            <h4>Vatandaşlık Tanıtım Videosu</h4>
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/uU7onPcJoqA" frameBorder="0" allowFullScreen></iframe>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="row mt--30">
-                    <div className="col-lg-12">
-                        <div className="video-wrapper">
-                            <h4>Coğrafya Tanıtım Videosu</h4>
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO5_ID" frameBorder="0" allowFullScreen></iframe>
-                        </div>
-                    </div>
-                </div>
+        <div className="row mt--30">
+          {/* 1. Embed Video - Örnek Soru Çözüm Videosu */}
+          <div className="col-lg-12 col-md-12 mb--30">
+            <h4>Örnek Soru Çözüm Videosu</h4>
+            <div className="video-wrapper" style={{ position: "relative", paddingBottom: "56.25%", height: "0", overflow: "hidden" }}>
+              <iframe
+                src="https://player.vimeo.com/video/1031471629?badge=0&autopause=0&player_id=0&app_id=58479"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                title="Online YDS Kursu Örnek Soru Çözüm Videosu"
+              ></iframe>
             </div>
+          </div>
 
-            <div className="container">
-                <div className="row">
-                    <div className="rbt-course-feature-box rbt-shadow-box details-wrapper mt--30" id="details">
-                        <div className="row g-5">
-                            <div className="col-lg-6">
-                                <div className="section-title">
-                                    <h4 className="rbt-title-style-3 mb--20">Eğitim İçeriği</h4>
-                                </div>
-                                <ul className="rbt-list-style-1">
-                                    <li><i className="feather-check"></i>📚 Toplam 400 saat ONLINE (CANLI DERS)</li>
-                                    <li><i className="feather-check"></i>👍5 adet kaynak</li>
-                                    <li><i className="feather-check"></i>👍Tüm konulara ait konu anlatımı</li>
-                                    <li><i className="feather-check"></i>👍Çıkmış sınav sorularının çözümü</li>
-                                </ul>
-                            </div>
-
-                            <div className="col-lg-6">
-                                <div className="section-title">
-                                    <h4 className="rbt-title-style-3 mb--20">Online KPSS Kursu</h4>
-                                </div>
-                                <ul className="rbt-list-style-1">
-                                    <li><i className="feather-check"></i>👍Soru çözüm stratejileri</li>
-                                    <li><i className="feather-check"></i>👍PDF doküman desteği</li>
-                                    <li><i className="feather-check"></i>👍10 adet online deneme</li>
-                                    <li><i className="feather-check"></i>👍Öğretmenin ders notları</li>
-                                    <li><i className="feather-check"></i>👍KPSS kampı</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          {/* Örnek Ders Videosu */}
+          <div className="col-lg-12 col-md-12 mb--30">
+            <h4>Örnek Ders Videosu</h4>
+            <div className="video-wrapper" style={{ position: "relative", paddingBottom: "56.25%", height: "0", overflow: "hidden" }}>
+              <iframe
+                src="https://player.vimeo.com/video/1025861989?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                title="Örnek Ders Videosu"
+              ></iframe>
             </div>
+          </div>
+
+          {/* 2. Embed Video - 1. Hafta 1,2,3,4. Ders Videoları */}
+          <div className="col-lg-12 col-md-12 mb--30">
+            <h4>1. Hafta 1,2,3,4. Ders Videoları</h4>
+            <div className="video-wrapper" style={{ position: "relative", paddingBottom: "56.25%", height: "0", overflow: "hidden" }}>
+              <iframe
+                src="https://player.vimeo.com/video/1030326070?h=2c6698a43e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                title="1. Hafta 1,2,3,4. Ders Videoları"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
         </div>
     );
 };

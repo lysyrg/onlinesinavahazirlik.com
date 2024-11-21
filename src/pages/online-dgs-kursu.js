@@ -1,10 +1,9 @@
 import React from 'react';
-import Header from '../components/inc_header';
 
 const OnlineDGSKursu = () => {
   return (
     <div>
-      <Header />
+   
 
       <div className="rbt-progress-parent">
         <svg className="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -33,14 +32,14 @@ const OnlineDGSKursu = () => {
                       Uzman eğitmenlerle hazırlanmış içerikler ve interaktif derslerle DGS sınavlarında başarıya ulaşmanın anahtarı burada!
                     </p>
                     <div className="slider-btn rbt-button-group justify-content-start">
-                      <a className="rbt-btn btn-gradient radius-round hover-icon-reverse" href="kurskayit.php">
+                      <a className="rbt-btn btn-gradient radius-round hover-icon-reverse" href="/login">
                         <span className="icon-reverse-wrapper">
                           <span className="btn-text">Kursa Kayıt Ol</span>
                           <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                           <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                         </span>
                       </a>
-                      <a className="rbt-btn radius-round hover-icon-reverse btn-white" href="iletisim.php">
+                      <a className="rbt-btn radius-round hover-icon-reverse btn-white" href="/iletisim">
                         <span className="icon-reverse-wrapper">
                           <span className="btn-text">İletişim</span>
                           <span className="btn-icon"><i className="feather-arrow-right"></i></span>

@@ -1,10 +1,9 @@
 import React from 'react';
-import Header from '../components/inc_header';
 
 const OnlineALESMatematikKursu = () => {
   return (
     <div className="rbt-header-sticky">
-      <Header /> {/* Header bileşenini çağırdık */}
+    
 
       <div className="rbt-banner-area rbt-banner-8 variation-01 bg_image bg_image--9">
         <div className="wrapper w-100">

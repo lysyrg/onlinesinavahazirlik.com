@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Header from './inc_header';
+
 
 const LoginRegisterPage = () => {
   const navigate = useNavigate();
@@ -15,6 +15,7 @@ const LoginRegisterPage = () => {
     adSoyad: '',
     kurs: '',
     telefon: '',
+    adres: '',
     password: '',
     confirmPassword: ''
   });
@@ -37,20 +38,27 @@ const LoginRegisterPage = () => {
     try {
       const response = await axios.post('https://onlinesinavahazirlik.com/onlinesinavahazirlik-backend/public/login', loginData, { withCredentials: true });
       if (response.data.message === 'Giriş başarılı') {
-        alert(response.data.message);
-        navigate('/kursiyer-kursu');
+        navigate('/kursiyer-kursu'); // Mesaj göstermeden doğrudan yönlendirme yapılıyor
       } else {
-        alert('Giriş işlemi başarısız. Lütfen tekrar deneyin.');
+        alert('Giriş işlemi başarısız. Lütfen tekrar deneyin.'); // Başarısız giriş için hata mesajı
       }
     } catch (error) {
       console.error('Giriş işlemi başarısız:', error);
-      alert('Giriş işlemi başarısız. Lütfen tekrar deneyin.');
+      alert('Giriş işlemi başarısız. Lütfen tekrar deneyin.'); // Hata durumunda mesaj
     }
   };
+
 
   // Kayıt formu gönderimi
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
+
+    // Şifre uzunluğunu kontrol et
+    if (registerData.password.length < 6) {
+      alert('Şifreniz en az 6 karakter olmalıdır.');
+      return;
+    }
+
     if (registerData.password !== registerData.confirmPassword) {
       alert('Şifreler eşleşmiyor.');
       return;
@@ -65,6 +73,7 @@ const LoginRegisterPage = () => {
     }
   };
 
+
   // Input dolu olduğunda label'ı yukarı taşıma kontrolü
   const isInputFilled = (value) => {
     return value && value.trim() !== '';
@@ -72,7 +81,7 @@ const LoginRegisterPage = () => {
 
   return (
     <div className="rbt-header-sticky">
-      <Header />
+     
       <style>
         {`
     /* Form grupları için temel stil */
@@ -172,7 +181,7 @@ const LoginRegisterPage = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="breadcrumb-inner text-center">
-                <h2 className="title">Giriş Yap & Kayıt Ol</h2>
+             
               </div>
             </div>
           </div>
@@ -270,14 +279,24 @@ const LoginRegisterPage = () => {
                       required
                     >
                       <option value="">Kurs Seçin*</option>
-                      <option value="KPSS">KPSS Kursu</option>
-                      <option value="DGS">DGS Kursu</option>
-                      <option value="ALES">ALES Kursu</option>
-                      <option value="YDS">YDS Kursu</option>
+                      <option value="YDS Kursu">YDS Kursu</option>
                     </select>
                     <label className={isInputFilled(registerData.kurs) ? 'active' : ''}>Kurs Seçin*</label>
                     <span className="focus-border"></span>
                   </div>
+
+                  <div className="form-group">
+                    <input
+                      name="adres"
+                      type="text"
+                      onChange={handleRegisterChange}
+                      value={registerData.adres}
+                      required
+                    />
+                    <label className={isInputFilled(registerData.adres) ? 'active' : ''}>Adres *</label>
+                    <span className="focus-border"></span>
+                  </div>
+
 
                   <div className="form-group">
                     <input

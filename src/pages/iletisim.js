@@ -1,15 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom'; // Link bileşenini içe aktarıyoruz
-import Header from '../components/inc_header';
+
 
 
 const IletisimBilgileri = () => {
     return (
         <div>
-            <header>
-                <Header />
-            </header>
+           
 
             <div className="rbt-conatct-area bg-gradient-11 rbt-section-gap">
                 <div className="container">

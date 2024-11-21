@@ -1,10 +1,9 @@
 import React from 'react';
-import Header from '../components/inc_header';
 
 const OnlineALESKursu = () => {
   return (
     <div className="rbt-header-sticky">
-      <Header /> {/* Header bileşenini çağırdık */}
+    
 
       <div className="rbt-banner-area rbt-banner-8 variation-01 bg_image bg_image--9">
         <div className="wrapper w-100">
@@ -29,14 +28,14 @@ const OnlineALESKursu = () => {
                       Uzman eğitmenlerle hazırlanmış içerikler ve interaktif derslerle ALES sınavlarında başarıya ulaşmanın anahtarı burada!
                     </p>
                     <div className="slider-btn rbt-button-group justify-content-start">
-                      <a className="rbt-btn btn-gradient radius-round hover-icon-reverse" href="kurskayit.php">
+                      <a className="rbt-btn btn-gradient radius-round hover-icon-reverse" href="/login">
                         <span className="icon-reverse-wrapper">
                           <span className="btn-text">Kursa Kayıt Ol</span>
                           <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                           <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                         </span>
                       </a>
-                      <a className="rbt-btn radius-round hover-icon-reverse btn-white" href="iletisim.php">
+                      <a className="rbt-btn radius-round hover-icon-reverse btn-white" href="/iletisim">
                         <span className="icon-reverse-wrapper">
                           <span className="btn-text">İletişim</span>
                           <span className="btn-icon"><i className="feather-arrow-right"></i></span>

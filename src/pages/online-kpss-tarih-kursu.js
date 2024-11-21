@@ -1,10 +1,9 @@
 import React from 'react';
-import Header from '../components/inc_header';
 
 const OnlineKPSSTarihKursu = () => {
   return (
     <div>
-      <Header />
+  
 
       <div className="rbt-progress-parent">
         <svg className="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">

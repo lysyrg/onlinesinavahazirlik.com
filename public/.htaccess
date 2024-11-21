@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+
+# Backend yönlendirmelerini hariç tutun
+RewriteCond %{REQUEST_URI} !^/onlinesinavahazirlik-backend/
+
+# Mevcut dosya veya dizin yoksa frontend `index.html`'e yönlendirin
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /index.html [L]
